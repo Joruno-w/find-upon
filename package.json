@@ -12,7 +12,31 @@
     "url": "git+https://github.com/Joruno-w/find-upon.git"
   },
   "bugs": "https://github.com/Joruno-w/find-upon/issues",
-  "keywords": ["search","find","up","upon","upper","above"],
+  "keywords": [
+    "search",
+    "find",
+    "up",
+    "upon",
+    "upper",
+    "above",
+    "find-up",
+    "find-upon",
+    "look",
+    "look-up",
+    "look-upon",
+    "match",
+    "file",
+    "package",
+    "pkg",
+    "resolve",
+    "parent",
+    "parents",
+    "folder",
+    "directory",
+    "walk",
+    "walking",
+    "path"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
