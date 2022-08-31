@@ -11,7 +11,7 @@ interface Options extends Options$1 {
 declare const findUpStop: Symbol;
 declare const findUpMultiple: (name: NameTypes, options?: Options) => Promise<string[]>;
 declare const findUpMultipleSync: (name: NameTypes, options?: Options) => string[];
-declare function findUp(name: NameTypes, options?: {}): Promise<string>;
-declare function findUpSync(name: NameTypes, options?: {}): string;
+declare const findUp: (name: NameTypes, options?: {}) => Promise<string>;
+declare const findUpSync: (name: NameTypes, options?: {}) => string;
 
 export { findUp, findUpMultiple, findUpMultipleSync, findUpStop, findUpSync };

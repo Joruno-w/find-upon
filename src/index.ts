@@ -116,14 +116,14 @@ export const findUpMultipleSync = (name: NameTypes, options: Options = {}) => {
   return matches;
 };
 
-export async function findUp(name: NameTypes, options = {}) {
+export const findUp = async (name: NameTypes, options = {}) => {
   const matches = await findUpMultiple(name, { ...options, limit: 1 });
   return matches[0];
-}
+};
 
-export function findUpSync(name: NameTypes, options = {}) {
+export const findUpSync = (name: NameTypes, options = {}) => {
   const matches = findUpMultipleSync(name, { ...options, limit: 1 });
   return matches[0];
-}
+};
 
 export { pathExists, pathExistsSync } from "path-exists";

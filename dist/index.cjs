@@ -77,14 +77,14 @@ const findUpMultipleSync = (name, options = {}) => {
   }
   return matches;
 };
-async function findUp(name, options = {}) {
+const findUp = async (name, options = {}) => {
   const matches = await findUpMultiple(name, { ...options, limit: 1 });
   return matches[0];
-}
-function findUpSync(name, options = {}) {
+};
+const findUpSync = (name, options = {}) => {
   const matches = findUpMultipleSync(name, { ...options, limit: 1 });
   return matches[0];
-}
+};
 
 exports.pathExists = pathExists.pathExists;
 exports.pathExistsSync = pathExists.pathExistsSync;
