@@ -1,4 +1,4 @@
-# find-up
+# find-upon
 
 > Find a file or directory by walking up parent directories
 
