@@ -1,35 +1,36 @@
 lockfileVersion: 5.4
 
-importers:
+specifiers:
+  '@types/node': ^18.7.5
+  bumpp: ^8.2.1
+  eslint: ^8.22.0
+  esno: ^0.16.3
+  locate-path: ^7.1.1
+  path-exists: ^5.0.0
+  pnpm: ^7.9.0
+  rimraf: ^3.0.2
+  typescript: ^4.7.4
+  unbuild: ^0.8.8
+  urpm: ^0.0.4
+  vite: ^3.0.7
+  vitest: ^0.22.0
 
-  .:
-    specifiers:
-      '@types/node': ^18.7.5
-      bumpp: ^8.2.1
-      eslint: ^8.22.0
-      esno: ^0.16.3
-      locate-path: ^7.1.1
-      path-exists: ^5.0.0
-      pnpm: ^7.9.0
-      rimraf: ^3.0.2
-      typescript: ^4.7.4
-      unbuild: ^0.8.8
-      vite: ^3.0.7
-      vitest: ^0.22.0
-    dependencies:
-      locate-path: 7.1.1
-      path-exists: r2.cnpmjs.org/path-exists/5.0.0
-    devDependencies:
-      '@types/node': 18.7.5
-      bumpp: 8.2.1
-      eslint: 8.22.0
-      esno: 0.16.3
-      pnpm: 7.9.0
-      rimraf: 3.0.2
-      typescript: 4.7.4
-      unbuild: 0.8.8
-      vite: 3.0.7
-      vitest: 0.22.0
+dependencies:
+  locate-path: 7.1.1
+  path-exists: r2.cnpmjs.org/path-exists/5.0.0
+
+devDependencies:
+  '@types/node': 18.7.5
+  bumpp: 8.2.1
+  eslint: 8.22.0
+  esno: 0.16.3
+  pnpm: 7.9.0
+  rimraf: 3.0.2
+  typescript: 4.7.4
+  unbuild: 0.8.8
+  urpm: 0.0.4
+  vite: 3.0.7
+  vitest: 0.22.0
 
 packages:
 
@@ -1587,6 +1588,14 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
@@ -2142,7 +2151,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: r2.cnpmjs.org/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /run-parallel/1.2.0:
@@ -2289,7 +2298,7 @@ packages:
       '@esbuild-kit/core-utils': 2.0.2
       '@esbuild-kit/esm-loader': 2.4.0
     optionalDependencies:
-      fsevents: r2.cnpmjs.org/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /type-check/0.4.0:
@@ -2388,6 +2397,11 @@ packages:
       punycode: 2.1.1
     dev: true
 
+  /urpm/0.0.4:
+    resolution: {integrity: sha512-G9DUeffKYljqLi4E95aG4DA1dfg1YTRm7Bkc7fctAatH7qSVqa1s6v4XPKavJ3lszUMhDrw5QX0tywcc8/PaMQ==}
+    hasBin: true
+    dev: true
+
   /v8-compile-cache/2.3.0:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
@@ -2416,7 +2430,7 @@ packages:
       resolve: 1.22.1
       rollup: 2.77.2
     optionalDependencies:
-      fsevents: r2.cnpmjs.org/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /vitest/0.22.0:
@@ -2478,16 +2492,6 @@ packages:
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
-
-  r2.cnpmjs.org/fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   r2.cnpmjs.org/locate-path/6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/locate-path/-/locate-path-6.0.0.tgz}
