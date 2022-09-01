@@ -26,7 +26,7 @@ $ npm install find-upon
 
 ```js
 import path from 'node:path';
-import {findUp, pathExists} from 'find-up';
+import {findUp, pathExists} from 'find-upon';
 
 console.log(await findUp('index.js'));
 //=> '/example/Joruno/index.js'
@@ -146,16 +146,9 @@ A [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/G
 
 ```js
 import path from 'node:path';
-import {findUp, findUpStop} from 'find-up';
+import {findUp, findUpStop} from 'find-upon';
 
 await findUp(directory => {
 	return path.basename(directory) === 'work' ? findUpStop : 'logo.png';
 });
 ```
-
-## Related
-
-- [find-up-cli](https://github.com/sindresorhus/find-up-cli) - CLI for this module
-- [pkg-up](https://github.com/sindresorhus/pkg-up) - Find the closest package.json file
-- [pkg-dir](https://github.com/sindresorhus/pkg-dir) - Find the root directory of an npm package
-- [resolve-from](https://github.com/sindresorhus/resolve-from) - Resolve the path of a module like `require.resolve()` but from a given path
