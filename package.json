@@ -1,7 +1,7 @@
 {
   "name": "find-upon",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "packageManager": "pnpm@7.9.0",
   "description": "Find a file or directory by walking up parent directories",
   "author": "Joruno",
@@ -83,7 +83,7 @@
     "vitest": "^0.22.0"
   },
   "dependencies": {
-    "locate-path": "^7.1.1",
-    "path-exists": "^5.0.0"
+    "has-path": "^1.0.4",
+    "locate-path": "^7.1.1"
   }
 }
