@@ -1,7 +1,7 @@
 {
   "name": "find-upon",
   "type": "module",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "packageManager": "pnpm@7.9.0",
   "description": "Find a file or directory by walking up parent directories",
   "author": "Joruno",
