@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { locatePath, locatePathSync } from 'locate-path';
-export { pathExists, pathExistsSync } from 'path-exists';
+export { hasPath, hasPathSync } from 'has-path';
 
 const toPath = (urlOrPath) => urlOrPath instanceof URL ? fileURLToPath(urlOrPath) : urlOrPath;
 const findUpStop = Symbol("findUpStop");

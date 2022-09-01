@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 const path = require('node:path');
 const node_url = require('node:url');
 const locatePath = require('locate-path');
-const pathExists = require('path-exists');
+const hasPath = require('has-path');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e["default"] : e; }
 
@@ -86,8 +86,8 @@ const findUpSync = (name, options = {}) => {
   return matches[0];
 };
 
-exports.pathExists = pathExists.pathExists;
-exports.pathExistsSync = pathExists.pathExistsSync;
+exports.hasPath = hasPath.hasPath;
+exports.hasPathSync = hasPath.hasPathSync;
 exports.findUp = findUp;
 exports.findUpMultiple = findUpMultiple;
 exports.findUpMultipleSync = findUpMultipleSync;

@@ -1,5 +1,5 @@
 import { Options as Options$1 } from 'locate-path';
-export { pathExists, pathExistsSync } from 'path-exists';
+export { hasPath, hasPathSync } from 'has-path';
 
 declare type MaybePromise<T> = T | Promise<T>;
 declare type Path = string | undefined;

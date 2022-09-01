@@ -5,8 +5,8 @@ specifiers:
   bumpp: ^8.2.1
   eslint: ^8.22.0
   esno: ^0.16.3
+  has-path: ^1.0.4
   locate-path: ^7.1.1
-  path-exists: ^5.0.0
   pnpm: ^7.9.0
   rimraf: ^3.0.2
   typescript: ^4.7.4
@@ -16,8 +16,8 @@ specifiers:
   vitest: ^0.22.0
 
 dependencies:
+  has-path: 1.0.4
   locate-path: 7.1.1
-  path-exists: r2.cnpmjs.org/path-exists/5.0.0
 
 devDependencies:
   '@types/node': 18.7.5
@@ -1695,6 +1695,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /has-path/1.0.4:
+    resolution: {integrity: sha512-Dj8DBY141ZuEPJf26CSrySJ8SicbIAqRrIprufOm+N25o8xUQJeZ/DMrpnJ4wLnaa2yxn/xjmR1qyJk58ixuPA==}
+    dev: false
+
   /has/1.0.3:
     resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
     engines: {node: '>= 0.4.0'}
@@ -2544,13 +2548,6 @@ packages:
     version: 4.0.0
     engines: {node: '>=8'}
     dev: true
-
-  r2.cnpmjs.org/path-exists/5.0.0:
-    resolution: {integrity: sha512-RjhtfwJOxzcFmNOi6ltcbcu4Iu+FL3zEj83dk4kAS+fVpTxXLO1b38RvJgT/0QwvV/L3aY9TAnyv0EOqW4GoMQ==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/path-exists/-/path-exists-5.0.0.tgz}
-    name: path-exists
-    version: 5.0.0
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
 
   r2.cnpmjs.org/yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz}

@@ -50,9 +50,7 @@ export const findUpMultiple = async (
   };
 
   const matches = [];
-  // eslint-disable-next-line no-constant-condition
   while (true) {
-    // eslint-disable-next-line no-await-in-loop
     const foundPath = await runMatcher({ ...options, cwd: directory });
 
     if (foundPath === findUpStop) {
@@ -94,7 +92,6 @@ export const findUpMultipleSync = (name: NameTypes, options: Options = {}) => {
   };
 
   const matches = [];
-  // eslint-disable-next-line no-constant-condition
   while (true) {
     const foundPath = runMatcher({ ...options, cwd: directory });
 
@@ -126,4 +123,4 @@ export const findUpSync = (name: NameTypes, options = {}) => {
   return matches[0];
 };
 
-export { pathExists, pathExistsSync } from "path-exists";
+export { hasPath, hasPathSync } from "has-path";
