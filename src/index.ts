@@ -7,14 +7,12 @@ import {
   AsyncOptions,
 } from "locate-path";
 
-type MaybePromise<T> = T | Promise<T>;
-
 type Path = string | undefined;
 
 type NameTypes =
   | string
   | string[]
-  | ((directory: URL | Path) => MaybePromise<Path | Symbol>);
+  | ((directory: URL | Path) => Path | Promise<Path> | Symbol);
 
 interface Options extends LocateOptions {
   limit?: number;

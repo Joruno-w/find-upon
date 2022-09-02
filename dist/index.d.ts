@@ -1,9 +1,8 @@
 import { Options as Options$1 } from 'locate-path';
 export { hasPath, hasPathSync } from 'has-path';
 
-declare type MaybePromise<T> = T | Promise<T>;
 declare type Path = string | undefined;
-declare type NameTypes = string | string[] | ((directory: URL | Path) => MaybePromise<Path | Symbol>);
+declare type NameTypes = string | string[] | ((directory: URL | Path) => Path | Promise<Path> | Symbol);
 interface Options extends Options$1 {
     limit?: number;
     readonly stopAt?: string;

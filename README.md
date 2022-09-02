@@ -126,11 +126,11 @@ Default: `path.parse(cwd).root`
 
 The path to the directory to stop the search before reaching root if there were no matches before the `stopAt` directory.
 
-### pathExists(path)
+### hasPath(path | path[])
 
 Returns a `Promise<boolean>` of whether the path exists.
 
-### pathExistsSync(path)
+### hasPathSync(path | path[])
 
 Returns a `boolean` of whether the path exists.
 
