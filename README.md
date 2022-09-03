@@ -25,25 +25,31 @@ $ npm install find-upon
 `example.js`
 
 ```js
-import path from 'node:path';
-import {findUp, pathExists} from 'find-upon';
+import path from "node:path";
+import { findUp, pathExists } from "find-upon";
 
-console.log(await findUp('index.js'));
+console.log(await findUp("index.js"));
 //=> '/example/Joruno/index.js'
 
-console.log(await findUp(['main.js', 'index.js']));
+console.log(await findUp(["main.js", "index.js"]));
 //=> '/example/Joruno/index.js'
 
-console.log(await findUp(async directory => {
-	const hasUnicorns = await pathExists(path.join(directory, 'index.js'));
-	return hasUnicorns && directory;
-}, {type: 'directory'}));
+console.log(
+  await findUp(
+    async (directory) => {
+      const hasUnicorns = await pathExists(path.join(directory, "index.js"));
+      return hasUnicorns && directory;
+    },
+    { type: "directory" }
+  )
+);
 //=> '/example/Joruno'
 ```
 
 ## API
 
 ### findUp(name, options?)
+
 ### findUp(matcher, options?)
 
 Returns a `Promise` for either the path or `undefined` if it couldn't be found.
@@ -53,6 +59,7 @@ Returns a `Promise` for either the path or `undefined` if it couldn't be found.
 Returns a `Promise` for either the first path found (by respecting the order of the array) or `undefined` if none could be found.
 
 ### findUpMultiple(name, options?)
+
 ### findUpMultiple(matcher, options?)
 
 Returns a `Promise` for either an array of paths or an empty array if none could be found.
@@ -62,6 +69,7 @@ Returns a `Promise` for either an array of paths or an empty array if none could
 Returns a `Promise` for either an array of the first paths found (by respecting the order of the array) or an empty array if none could be found.
 
 ### findUpSync(name, options?)
+
 ### findUpSync(matcher, options?)
 
 Returns a path or `undefined` if it couldn't be found.
@@ -71,6 +79,7 @@ Returns a path or `undefined` if it couldn't be found.
 Returns the first path found (by respecting the order of the array) or `undefined` if none could be found.
 
 ### findUpMultipleSync(name, options?)
+
 ### findUpMultipleSync(matcher, options?)
 
 Returns an array of paths or an empty array if none could be found.
@@ -145,10 +154,10 @@ The path to a file or directory.
 A [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that can be returned by a `matcher` function to stop the search and cause `findUp` to immediately return `undefined`. Useful as a performance optimization in case the current working directory is deeply nested in the filesystem.
 
 ```js
-import path from 'node:path';
-import {findUp, findUpStop} from 'find-upon';
+import path from "node:path";
+import { findUp, findUpStop } from "find-upon";
 
-await findUp(directory => {
-	return path.basename(directory) === 'work' ? findUpStop : 'logo.png';
+await findUp((directory) => {
+  return path.basename(directory) === "work" ? findUpStop : "logo.png";
 });
 ```
