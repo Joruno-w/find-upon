@@ -26,7 +26,7 @@ $ npm install find-upon
 
 ```js
 import path from "node:path";
-import { findUp, pathExists } from "find-upon";
+import { findUp, hasPath } from "find-upon";
 
 console.log(await findUp("index.js"));
 //=> '/example/Joruno/index.js'
@@ -37,8 +37,8 @@ console.log(await findUp(["main.js", "index.js"]));
 console.log(
   await findUp(
     async (directory) => {
-      const hasUnicorns = await pathExists(path.join(directory, "index.js"));
-      return hasUnicorns && directory;
+      const has = await hasPath(path.join(directory, "index.js"));
+      return has && directory;
     },
     { type: "directory" }
   )
